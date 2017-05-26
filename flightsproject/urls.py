@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from flights.views import iata_code_search_view, name_search_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^airport/$', iata_code_search_view, name='iata_code_search'),
+    url(r'^airports/$', name_search_view, name='name_search_view')
 ]

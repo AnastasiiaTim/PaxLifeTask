@@ -43,6 +43,7 @@ class Command(BaseCommand):
                 airport, created = Airport.objects.get_or_create(
                     ident=ident,
                     type=type,
+                    name=name,
                     latitude_deg=latitude_deg,
                     longitude_deg=longitude_deg,
                     elevation_ft=elevation_ft,
